@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/lato/400.css";
+@import "@fontsource/lato/700.css";
+
+@layer base {
+  :root {
+    --background: 39 38% 93%;
+    --foreground: 0 0% 18%;
+
+    --card: 39 38% 93%;
+    --card-foreground: 0 0% 18%;
+
+    --popover: 39 38% 93%;
+    --popover-foreground: 0 0% 18%;
+
+    --primary: 0 69% 32%;
+    --primary-foreground: 39 38% 93%;
+
+    --secondary: 39 38% 88%;
+    --secondary-foreground: 0 0% 18%;
+
+    --muted: 39 20% 85%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 41 52% 54%;
+    --accent-foreground: 0 0% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 39 20% 80%;
+    --input: 39 20% 80%;
+    --ring: 0 69% 32%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 18%;
+    --sidebar-foreground: 39 38% 93%;
+    --sidebar-primary: 0 69% 32%;
+    --sidebar-primary-foreground: 39 38% 93%;
+    --sidebar-accent: 41 52% 54%;
+    --sidebar-accent-foreground: 0 0% 18%;
+    --sidebar-border: 0 0% 25%;
+    --sidebar-ring: 41 52% 54%;
+
+    --font-display: "Playfair Display", serif;
+    --font-body: "Lato", sans-serif;
+
+    --gold-gradient: linear-gradient(135deg, hsl(41 52% 54%), hsl(41 60% 65%));
+    --wine-gradient: linear-gradient(135deg, hsl(0 69% 32%), hsl(0 60% 25%));
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 18% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 18% / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center rounded-md px-8 py-3 font-bold tracking-wide uppercase transition-all duration-300;
+    background: var(--gold-gradient);
+    color: hsl(var(--foreground));
+    box-shadow: var(--shadow-soft);
+  }
+  .btn-gold:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .btn-wine {
+    @apply inline-flex items-center justify-center rounded-md border-2 border-primary px-6 py-2 font-bold tracking-wide uppercase text-primary transition-all duration-300;
+    background: transparent;
+  }
+  .btn-wine:hover {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .section-padding {
+    @apply px-6 py-16 md:px-12 lg:px-24 lg:py-24;
+  }
+
+  .pill-selector {
+    @apply cursor-pointer rounded-full border-2 border-primary px-5 py-2 text-sm font-bold uppercase tracking-wider text-primary transition-all duration-300;
+  }
+  .pill-selector:hover,
+  .pill-selector.active {
+    @apply bg-primary text-primary-foreground;
+  }
+}
