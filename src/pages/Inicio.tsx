@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroBg from "@/assets/hero-bg.jpg";
-import cafitasImg from "@/assets/cafitas-product.jpg";
-import tamiringoImg from "@/assets/tamiringo-product.jpg";
+import cafitasImg from "@/assets/cafitas_producto_inicio.jpg";
+import tamiringoImg from "@/assets/tamiringo-producto_inicio.jpg";
 import logoCafi from "@/assets/logo_cafitas.png";
 import logoTamarin from "@/assets/logo_tamiringo.png";
 

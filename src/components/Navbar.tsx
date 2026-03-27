@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import logoMinea from "@/assets/logo_empresa.png";
+import logoMinea from "@/assets/logo.png";
 import { useState } from "react";
 
 

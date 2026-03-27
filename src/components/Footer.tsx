@@ -8,9 +8,9 @@ const Footer = () => {
         <div>
           <h4 className="mb-4 font-display text-lg font-bold text-accent">Legal</h4>
           <ul className="space-y-2 font-body text-sm text-primary-foreground/70">
-            <li><Link to="/" className="transition-colors hover:text-accent">Aviso de Privacidad</Link></li>
-            <li><Link to="/" className="transition-colors hover:text-accent">Términos y Condiciones</Link></li>
-            <li><Link to="/" className="transition-colors hover:text-accent">Política de Cookies</Link></li>
+            <li><a href="/src/assets/Documentos/AVISO DE PRIVACIDAD MINEA COMPAY.pdf" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">Aviso de Privacidad</a></li>
+            <li><a href="/src/assets/Documentos/TÉRMINOS Y CONDICIONES MINEA COMPANY.pdf" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">Términos y Condiciones</a></li>
+            <li><a href="/src/assets/Documentos/POLÍTICA DE COOKIES MINEA COMPANY.pdf" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">Política de Cookies</a></li>
           </ul>
         </div>
 

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import cafitasImg from "@/assets/cafitas-product.jpg";
-import tamiringoImg from "@/assets/tamiringo-product.jpg";
+import cafitasImg from "@/assets/cafitas_producto_productos.jpg";
+import tamiringoImg from "@/assets/tamiringo_productos_productos.jpg";
 
 const Productos = () => {
   const navigate = useNavigate();
@@ -34,29 +34,9 @@ const Productos = () => {
             <div className="mx-auto mb-6 aspect-square w-full max-w-sm overflow-hidden rounded-lg">
               <img src={cafitasImg} alt="Cafitas" className="h-full w-full object-cover" />
             </div>
-            <p className="mb-6 text-center font-body text-sm leading-relaxed text-muted-foreground">
+            <p className="mb-6 text-center font-body text-base leading-relaxed text-muted-foreground">
               Gomitas artesanales elaboradas con auténtico café Victoria de Misantla, Veracruz. Su sabor intenso y aroma inconfundible te transportan a los cafetales veracruzanos con cada bocado.
             </p>
-
-            <div className="mb-6">
-              <p className="mb-3 text-center font-body text-xs font-bold uppercase tracking-widest text-foreground">
-                Variante:
-              </p>
-              <div className="flex justify-center gap-3">
-                <button
-                  onClick={() => setCafitasVariant("sin-azucar")}
-                  className={`pill-selector ${cafitasVariant === "sin-azucar" ? "active" : ""}`}
-                >
-                  Sin Azúcar
-                </button>
-                <button
-                  onClick={() => setCafitasVariant("con-azucar")}
-                  className={`pill-selector ${cafitasVariant === "con-azucar" ? "active" : ""}`}
-                >
-                  Con Azúcar
-                </button>
-              </div>
-            </div>
 
             <button
               onClick={() => handleOrder("Cafitas", cafitasVariant === "con-azucar" ? "Con Azúcar" : "Sin Azúcar")}
@@ -72,30 +52,9 @@ const Productos = () => {
             <div className="mx-auto mb-6 aspect-square w-full max-w-sm overflow-hidden rounded-lg">
               <img src={tamiringoImg} alt="Tamiringo" className="h-full w-full object-cover" />
             </div>
-            <p className="mb-6 text-center font-body text-sm leading-relaxed text-muted-foreground">
-              Gomitas de tamarindo natural con un irresistible toque de chamoy artesanal. El equilibrio perfecto entre lo dulce, lo ácido y lo picosito que conquistará tu paladar.
+            <p className="mb-6 text-center font-body text-base leading-relaxed text-muted-foreground">
+              Gomitas de tamarindo natural con un irresistible toque artesanal. El equilibrio perfecto entre lo dulce y lo ácido que conquistará tu paladar.
             </p>
-
-            <div className="mb-6">
-              <p className="mb-3 text-center font-body text-xs font-bold uppercase tracking-widest text-foreground">
-                Variante:
-              </p>
-              <div className="flex justify-center gap-3">
-                <button
-                  onClick={() => setTamiringoVariant("con-chamoy")}
-                  className={`pill-selector ${tamiringoVariant === "con-chamoy" ? "active" : ""}`}
-                >
-                  Con Chamoy
-                </button>
-                <button
-                  onClick={() => setTamiringoVariant("con-azucar")}
-                  className={`pill-selector ${tamiringoVariant === "con-azucar" ? "active" : ""}`}
-                >
-                  Con Azúcar
-                </button>
-              </div>
-            </div>
-
             <button
               onClick={() => handleOrder("Tamiringo", tamiringoVariant === "con-chamoy" ? "Con Chamoy" : "Con Azúcar")}
               className="btn-gold mx-auto mt-auto"

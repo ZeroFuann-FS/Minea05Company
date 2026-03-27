@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import cafitasImg from "@/assets/cafitas-product.jpg";
-import tamiringoImg from "@/assets/tamiringo-product.jpg";
+import cafitasImg from "@/assets/cafitas_producto_inicio.jpg";
+import tamiringoImg from "@/assets/tamiringo-producto_inicio.jpg";
 import logoCafi from "@/assets/logo_cafitas.png";
 import logoTamarin from "@/assets/logo_tamiringo.png";
 
@@ -12,10 +12,8 @@ type Product = {
 };
 
 const products = [
-  { id: "cafitas-az", name: "Cafitas con Azúcar", img: cafitasImg, logo: logoCafi, price: 50 },
-  { id: "cafitas-sa", name: "Cafitas sin Azúcar", img: cafitasImg, logo: logoCafi, price: 55 },
-  { id: "tamiringo-ch", name: "Tamiringo con Chamoy", img: tamiringoImg, logo: logoTamarin, price: 45 },
-  { id: "tamiringo-az", name: "Tamiringo con Azúcar", img: tamiringoImg, logo: logoTamarin, price: 40 },
+  { id: "cafitas", name: "Cafitas", img: cafitasImg, logo: logoCafi, price: 22 },
+  { id: "tamiringo", name: "Tamiringo", img: tamiringoImg, logo: logoTamarin, price: 22 },
 ];
 
 const WHATSAPP_NUMBER = "527822447208";
@@ -168,11 +166,11 @@ className="w-full rounded-lg bg-primary px-6 py-4 font-display text-lg font-bold
                     className="aspect-[4/3] w-full rounded-xl object-cover shadow-lg group-hover:scale-105 transition-transform duration-500" 
                   />
                   <div className="mt-6 space-y-3">
-                    <h4 className="font-display text-xl font-bold text-primary">{product.name}</h4>
-                    <p className="text-muted-foreground">Ingredientes 100% naturales de Veracruz</p>
+  <h4 className="font-display text-xl font-bold text-primary">{product.name}</h4>
+                     <p className="font-body text-base text-muted-foreground  mb-2">{product.name === "Cafitas" ? "Gomitas de cafe con Ingredientes 100% naturales de Veracruz" : "Gomitas de tamaringo con Ingredientes 100% naturales de Veracruz"}</p>
                     <div className="flex items-baseline justify-between">
                       <span className="font-display text-2xl font-bold text-primary">${product.price}</span>
-                      <span className="font-body text-sm text-muted-foreground">/ bolsa 200g</span>
+                      <span className="font-body text-sm text-muted-foreground">/ bolsa 50g</span>
                     </div>
                     <div className="flex items-center gap-3">
                       {cart.find(p => p.name === product.name) ? (
@@ -191,6 +189,16 @@ className="w-full rounded-lg bg-primary px-6 py-4 font-display text-lg font-bold
                 </div>
               ))}
             </div>
+
+            {/* Próximos productos */}
+            <section className="mt-12 text-center">
+              <div className="mx-auto max-w-2xl rounded-xl bg-accent/10 p-12">
+                <h3 className="mb-6 font-display text-3xl font-bold text-primary">Próximos productos muy prontos</h3>
+                <p className="font-body text-lg text-muted-foreground">
+                  Estamos preparando más delicias para ti. ¡Muy pronto!
+                </p>
+              </div>
+            </section>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import cafitasImg from "@/assets/cafitas-product.jpg";
+import cafitasImg from "@/assets/Gomitas.jpg";
 import tamiringoImg from "@/assets/tamiringo-product.jpg";
 
 const valores = [
@@ -70,9 +70,8 @@ const Nosotros = () => {
       {/* Differentiator */}
       <section className="section-padding">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-5">
             <img src={cafitasImg} alt="Café Victoria" className="h-full w-full rounded-lg object-cover" />
-            <img src={tamiringoImg} alt="Tamarindo natural" className="h-full w-full rounded-lg object-cover" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="mb-4 font-display text-2xl font-bold text-primary">
